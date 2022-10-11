@@ -61,9 +61,9 @@ function Header() {
         <span>Huzaif Malik</span>
         <span>Skilled and expert in MERN Stack Development and Data Structure and Algorithms.</span>
         <div className='l-icon'>
-          <a href='https://www.instagram.com/huzaifmalik7860/' target='_blank'><InstagramIcon/></a>
-          <a href='https://github.com/huzaifmalik786' target='_blank'><GitHubIcon/></a>
-          <a href='https://www.linkedin.com/in/huzaif-malik-8ab2b5232/' target='_blank'><LinkedInIcon/></a>
+          <a href='https://www.instagram.com/huzaifmalik7860/' target='_blank' rel="noreferrer"><InstagramIcon/></a>
+          <a href='https://github.com/huzaifmalik786' target='_blank' rel="noreferrer"><GitHubIcon/></a>
+          <a href='https://www.linkedin.com/in/huzaif-malik-8ab2b5232/' target='_blank' rel="noreferrer"><LinkedInIcon/></a>
         </div>
       </div>
 

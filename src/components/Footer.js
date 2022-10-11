@@ -9,9 +9,9 @@ function Footer() {
   return (
     <div className="footer">
         <div className='f-icon'>
-          <a href='https://www.instagram.com/huzaifmalik7860/' target='_blank'><InstagramIcon/></a>
-          <a href='https://github.com/huzaifmalik786' target='_blank'><GitHubIcon/></a>
-          <a href='https://www.linkedin.com/in/huzaif-malik-8ab2b5232/' target='_blank'><LinkedInIcon/></a>
+          <a href='https://www.instagram.com/huzaifmalik7860/' target='_blank' rel="noreferrer"><InstagramIcon/></a>
+          <a href='https://github.com/huzaifmalik786' target='_blank' rel="noreferrer"><GitHubIcon/></a>
+          <a href='https://www.linkedin.com/in/huzaif-malik-8ab2b5232/' target='_blank' rel="noreferrer"><LinkedInIcon/></a>
         </div>
         <div className='f-content'>
             <p>Created By</p>

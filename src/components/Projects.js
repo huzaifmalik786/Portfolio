@@ -10,7 +10,7 @@ function Projects() {
     <div className='projects'>
         <section className='section2'>
             <div className='p-body'>
-                <a href='https://huzaifmalik786.netlify.app/' target='_blank'>
+                <a href='https://huzaifmalik786.netlify.app/' target='_blank' rel="noreferrer">
                     <div className='p-card reveal'>
                     <div className='p-image' style={{backgroundImage: `url(${weather})`}}></div>
                         <div className='p-info'>
@@ -19,7 +19,7 @@ function Projects() {
                         </div>
                     </div>
                 </a>
-                <a href='https://resume-builder1.netlify.app/' target='_blank'>
+                <a href='https://resume-builder1.netlify.app/' target='_blank' rel="noreferrer">
                     <div className='p-card reveal'>
                         <div className='p-image' style={{backgroundImage: `url(${resume})`}}></div>
                         <div className='p-info'>
@@ -28,7 +28,7 @@ function Projects() {
                         </div>
                     </div>
                 </a>
-                <a href='https://pizzaparlour.netlify.app/' target='_blank'>
+                <a href='https://pizzaparlour.netlify.app/' target='_blank' rel="noreferrer">
                     <div className='p-card reveal'>
                         <div className='p-image' style={{backgroundImage: `url(${pizza})`}}></div>
                         <div className='p-info'>
