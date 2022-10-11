@@ -16,7 +16,7 @@ function Header() {
   const download=(e)=>{
     e.preventDefault();
     Axios({
-      url: 'https://git.heroku.com/huzaifportfolio.git',
+      url: 'https://huzaifportfolio.herukoapp.com/',
       method: 'GET',
       responseType:'blob'
     }).then((res)=>{
