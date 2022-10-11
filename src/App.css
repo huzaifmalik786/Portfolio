@@ -1,0 +1,58 @@
+
+.App{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* overflow: hidden; */
+}
+
+.heading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #151515;
+  margin: 0;
+  padding-top: 3rem;
+}
+.heading h1{
+  color: white;
+  font-size: 2rem;
+  font-family: 'Cinzel Decorative', cursive;
+}
+.heading hr{
+  width: 30vw;
+  color: rgb(124, 123, 123);
+  margin: 10px;
+}
+
+.nbutton{
+  border-radius: 28px;
+  background: none;
+  border: solid 1px white;
+  color: white;
+  padding: 9px 25px;
+  font-size: 18px;
+  transition: transparent 0.5s;
+}
+.nbutton:hover{
+  background: rgba(0,0,0,0.7);
+  cursor:pointer;
+}
+
+@media screen  and (max-width:600px){
+  .heading h1{
+    font-size: 1.5rem;
+  }
+  .heading{
+    padding-top: 2rem;
+  }
+}
+@media screen  and (max-width:440px){
+  .heading h1{
+    font-size: 1.2rem;
+  }
+  .heading hr{
+    margin: 5px;
+    width: 25vw;
+  }
+}
