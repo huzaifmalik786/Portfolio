@@ -1,9 +1,6 @@
 import React,{useState} from 'react'
 import '../styles/Skills.css';
-import Carousel from 'react-bootstrap/Carousel';
-import slide1 from '../assets/slide1.jpg';
 import slide2 from '../assets/slide2.jpg';
-import slide3 from '../assets/slide3.jpg';
 
 
 function Skills() {
@@ -46,7 +43,10 @@ function Skills() {
     })
 
   return (
-      <div className='skills'>
+      <div className='skills' style= {{backgroundImage: `url(${slide2})`}}>
+        <div className="s-shadow"></div>
+      <div className='s-shadowbottom'></div>
+      <div className="overlay"></div>
         <div className="heading1 reveal">
           <hr />
           <h1 >Skills</h1>
@@ -140,35 +140,6 @@ function Skills() {
             </div>
           </div>
         </div>
-    <div className="s-background">
-      <div className="s-shadow"></div>
-      <div className='s-shadowbottom'></div>
-      <div className="overlay"></div>
-        <Carousel fade interval= '2000'>
-      <Carousel.Item>
-        <img
-          className="d-block wid"
-          src={slide1}
-          alt="First slide"
-        />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block wid"
-          src={slide2}
-          alt="Second slide"
-        />
-
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block wid"
-          src={slide3}
-          alt="Third slide"
-        />
-      </Carousel.Item>
-    </Carousel> 
-    </div>
     </div>
   )
 }
