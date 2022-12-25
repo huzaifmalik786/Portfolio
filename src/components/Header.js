@@ -10,16 +10,21 @@ import sky from "../assets/sky.png";
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import resume from "../assets/Resume.pdf";
 function Header() {
+  // const download=(e)=>{
+  //   e.preventDefault();
+  //   Axios({
+  //     url: 'https://visionary-cobbler-c8e403.netlify.app/.netlify/functions/api',
+  //     method: 'GET',
+  //     responseType:'blob'
+  //   }).then((res)=>{
+  //     FileDownload(res.data,"resume.pdf");
+  //   })
+  // }
   const download=(e)=>{
     e.preventDefault();
-    Axios({
-      url: 'https://huzaifportfolio.herokuapp.com/',
-      method: 'GET',
-      responseType:'blob'
-    }).then((res)=>{
-      FileDownload(res.data,"resume.pdf");
-    })
+    FileDownload(resume,"resume.pdf");
   }
   window.addEventListener('scroll', ()=>{
     let scroll=window.pageYOffset;
