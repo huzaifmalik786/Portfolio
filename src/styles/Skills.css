@@ -4,6 +4,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 .wid{
     height: 115vh;
@@ -217,7 +218,7 @@
         flex-direction: column;
     }
     .wid, .overlay, .skills{
-        height: 185vh;
+        height: 155vh;
     }
     .s-bar{
         width: 150%;
@@ -244,7 +245,7 @@
         font-size: 11px;
     }
     .wid, .overlay, .skills{
-        height: 145vh;
+        height: 150vh;
     }
 }
 @media screen and (max-width:350px){

@@ -1,31 +1,15 @@
 import React from 'react'
-import Axios from 'axios';
-import FileDownload from "js-file-download";
 import '../styles/Navbar.css';
 import person from "../assets/person.png";
 import mountain1 from "../assets/mountain1.png";
 import mountain2 from "../assets/mountain2.png";
 import mountain3 from "../assets/mountain3.png";
-import sky from "../assets/sky.png";
+import sky from "../assets/sky.jpg";
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import resume from "../assets/Resume.pdf";
 function Header() {
-  // const download=(e)=>{
-  //   e.preventDefault();
-  //   Axios({
-  //     url: 'https://visionary-cobbler-c8e403.netlify.app/.netlify/functions/api',
-  //     method: 'GET',
-  //     responseType:'blob'
-  //   }).then((res)=>{
-  //     FileDownload(res.data,"resume.pdf");
-  //   })
-  // }
-  const download=(e)=>{
-    e.preventDefault();
-    FileDownload(resume,"resume.pdf");
-  }
   window.addEventListener('scroll', ()=>{
     let scroll=window.pageYOffset;
     const translate= document.querySelectorAll('.translate');
@@ -49,7 +33,7 @@ function Header() {
       </div>
       <div className="n-right">
         <div className="n-menu">
-          <button onClick={(e)=>download(e)}>Get Resume</button>
+          <a href={resume} target="_blank" rel="noreferrer"><button>Get Resume</button></a>
         </div>
       </div>
     </div>

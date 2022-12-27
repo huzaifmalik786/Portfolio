@@ -1,20 +1,21 @@
 .contact{
-    min-height: 115vh;
+    min-height: 750px;
     overflow: hidden;
 }
 .contactimage{
     position: absolute;
-    min-height: 115vh;
+    min-height: 750px;
     width: 100%;
     z-index: -3;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .overlay1{
     position: absolute;
     width: 100%;
-    min-height: 115vh;
+    min-height: 750px;
     z-index: -1;
     background: linear-gradient(rgba(21, 21, 21,0.6), rgba(21, 21, 21,0.6));
 }
@@ -102,7 +103,7 @@
         font-size: 0.9rem;
     }
     .contact, .contactimage, .overlay1{
-        min-height: 102vh;
+        min-height: 600px;
     }
     .form-group input, textarea{
         font-size: 0.8rem;
