@@ -34,7 +34,7 @@ function About() {
                     About
                     <div className="border"></div>
                 </h3>
-                <p>MERN Stack Web Developer with background knowledge of Figma, SCSS, Bootstrap, etc. along with a knack of building applications with atmost efficiency. I'm a student of Jamia Milia Islamia persuing B.Tech in Electronics and Communication. I'm also a core team member of Web Development Team at GDSC JMI and DSA Team at IEEE JMI.</p>
+                <p>MERN Stack Web Developer with background knowledge of Figma, SCSS, Bootstrap, etc. along with a knack of building applications with atmost efficiency. I'm a student of Jamia Milia Islamia persuing B.Tech in Electronics and Communication. I'm also the Web Development Team Lead at GDSC JMI and member of DSA Team at IEEE JMI.</p>
                 <h2> Here Are A Few Highlights</h2>
                 <ul>
                   <li>MERN Stack Web Developer</li>
