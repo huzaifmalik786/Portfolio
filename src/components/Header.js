@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../styles/Navbar.css';
 import person from "../assets/person.png";
 import mountain1 from "../assets/mountain1.png";
@@ -8,8 +8,30 @@ import sky from "../assets/sky.jpg";
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import SegmentIcon from '@mui/icons-material/Segment';
+import CancelIcon from '@mui/icons-material/Cancel';
 import resume from "../assets/Resume.pdf";
-function Header() {
+function Header(props) {
+
+  const scrolltosection= (elementref)=>{
+    console.log(elementref);
+    elementref.current?.scrollIntoView({behavior: "smooth"});
+  }
+
+  const icons=[
+    {
+      icon: <InstagramIcon/>,
+      link: "https://www.instagram.com/huzaifmalik7860/"
+    },
+    {
+      icon: <GitHubIcon/>,
+      link: "https://github.com/huzaifmalik786"
+    },
+    {
+      icon: <LinkedInIcon/>,
+      link: "https://www.linkedin.com/in/huzaif-malik-8ab2b5232/"
+    }
+  ]
   window.addEventListener('scroll', ()=>{
     let scroll=window.pageYOffset;
     const translate= document.querySelectorAll('.translate');
@@ -24,6 +46,8 @@ function Header() {
     bigtitle.style.opacity= -scroll/(header_height/2)+1;
     shadow.style.height=`${scroll*0.5 + 300}px`;
   });
+
+  const [active,setactive]= useState(false);
   return (
     <div className='header'>
       <nav>
@@ -32,10 +56,27 @@ function Header() {
           <div className="n-name">Huzaif</div>
       </div>
       <div className="n-right">
-        <div className="n-menu">
-          <a href={resume} target="_blank" rel="noreferrer"><button>Get Resume</button></a>
+        <div className='bignavbar'>
+          <li onClick={()=>{scrolltosection(props.aboutref)}}>About</li>
+          <li onClick={()=>{scrolltosection(props.skillref)}}>Skills</li>
+          <li onClick={()=>{scrolltosection(props.projectref)}}>Projects</li>
+          <li onClick={()=>{scrolltosection(props.contactref)}}>Contact</li>
+          <li><a href={resume} target="_blank" rel="noreferrer">Get Resume</a></li>
+        </div>
+        <div className='smallnavbar'>
+          <button onClick={()=>setactive(!active)}><SegmentIcon/></button>
+          <div className='navigations' style={!active?{display:"none"}:{}}>
+            <button onClick={()=>setactive(!active)}><CancelIcon/></button>
+            <li onClick={()=>{scrolltosection(props.aboutref)}}>About</li>
+            <li onClick={()=>{scrolltosection(props.skillref)}}>Skills</li>
+            <li onClick={()=>{scrolltosection(props.projectref)}}>Projects</li>
+            <li onClick={()=>{scrolltosection(props.contactref)}}>Contact</li>
+            <li><a href={resume} target="_blank" rel="noreferrer">Get Resume</a></li>
+
+          </div>
         </div>
       </div>
+      
     </div>
     </nav>
       <div className="big-title translate" data-speed="0.1">
@@ -43,9 +84,9 @@ function Header() {
         <span>Huzaif Malik</span>
         <span>Skilled and expert in MERN Stack Development and Data Structure and Algorithms.</span>
         <div className='l-icon'>
-          <a href='https://www.instagram.com/huzaifmalik7860/' target='_blank' rel="noreferrer"><InstagramIcon/></a>
-          <a href='https://github.com/huzaifmalik786' target='_blank' rel="noreferrer"><GitHubIcon/></a>
-          <a href='https://www.linkedin.com/in/huzaif-malik-8ab2b5232/' target='_blank' rel="noreferrer"><LinkedInIcon/></a>
+          {icons.map((value)=>(
+            <a href={value.link} target='_blank' rel="noreferrer" className="iconlink">{value.icon}</a>
+          ))}
         </div>
       </div>
       <img src={person} className="person translate" data-speed="-0.25" alt=""/>

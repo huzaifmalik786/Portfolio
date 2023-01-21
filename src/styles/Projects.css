@@ -12,8 +12,7 @@
 .p-body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 2rem;
-    padding-top: 3rem;
+    padding: 2.5rem 2rem 1rem 2rem;
 }
 .p-body a{
     text-decoration: none;

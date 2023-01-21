@@ -1,6 +1,7 @@
 import React from 'react'
 import image from "../assets/image.jpg";
 import "../styles/About.css";
+import Atropos from 'atropos/react';
 
 function About() {
   window.addEventListener('scroll', ()=>{
@@ -45,7 +46,9 @@ function About() {
             </div>
 
             <div className="imgContainer opacity">
+              <Atropos className="my-atropos">
                 <img src={image} alt=""/>
+              </Atropos>
             </div>
         </div>
       </section>

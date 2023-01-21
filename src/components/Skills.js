@@ -6,6 +6,56 @@ import slide2 from '../assets/slide2.jpg';
 function Skills() {
   const [start,setstart]= useState(false);
   const [circlestart, setcirclestart]=useState(false);
+
+  const techskills= [
+    {
+      skill: "Front End Development",
+      perct: "90%"
+    },
+    {
+      skill: "Backend Development",
+      perct: "72%"
+    },
+    {
+      skill: "MERN Stack",
+      perct: "79%",
+    },
+    {
+      skill: "C++",
+      perct: "86%",
+    },
+    {
+      skill: "DSA",
+      perct: "76%"
+    },
+    {
+      skill: "Python",
+      perct: "69%"
+    }
+  ]
+  const profskills= [
+    {
+      skill: "Creativity",
+      perct: "70",
+      width: "78"
+    },
+    {
+      skill: "Designing",
+      perct:"65",
+      width: "100"
+    },
+    {
+      skill: "Project Management",
+      perct: "87",
+      width: "45"
+    },
+    {
+      skill: "Team Work",
+      perct: "83",
+      width: "55"
+    }
+  ]
+
   window.addEventListener('scroll', ()=>{
     const windowheight= window.innerHeight;
     const reveal= document.querySelectorAll('.reveal');
@@ -31,7 +81,7 @@ function Skills() {
     }
     reveal.forEach(element => {
       var revealtop= element.getBoundingClientRect().top;
-      var revealpoint= 250;
+      var revealpoint= 300;
       if(revealtop< windowheight - revealpoint){
         element.classList.add('active');
       }
@@ -55,88 +105,34 @@ function Skills() {
         <div className='s-wrap reveal'>
           <div className='s-container'>
             <div className='s-title'>Technical Skills</div>
-              <div className='s-bar'>
-                <div className='s-name'>
-                  <span>Front End Development</span>
-                  <span>85%</span>
-                </div> 
-                <div className='progress'><span style={start? {width: "85%"}: {width: "0%"}}></span></div>
-              </div>
-              <div className='s-bar'>
-                <div className='s-name'>
-                  <span>Backend Development</span>
-                  <span>65%</span>
+              {techskills.map((value)=>(
+                <div className="s-bar">
+                  <div className="s-name">
+                    <span>{value.skill}</span>
+                    <span>{value.perct}</span>
+                  </div>
+                  <div className='progress'><span style={start? {width: `${value.perct}`}: {width: "0%"}}></span></div>
                 </div>
-                <div className='progress'><span style={start? {width: "65%"}: {width: "0%"}}></span></div>
-              </div>
-              <div className='s-bar'>
-                <div className='s-name'>
-                  <span>ReactJS</span>
-                  <span>70%</span>
-                </div>
-                <div className='progress'><span style={start? {width: "70%"}: {width: "0%"}}></span></div>
-              </div>
-              <div className='s-bar'>
-                <div className='s-name'>
-                  <span>C++</span>
-                  <span>80%</span>
-                </div>
-                <div className='progress'><span style={start? {width: "80%"}: {width: "0%"}}></span></div>
-              </div>
-              <div className='s-bar'>
-                <div className='s-name'>
-                  <span>DSA</span>
-                  <span>76%</span>
-                </div>
-                <div className='progress'><span style={start? {width: "76%"}: {width: "0%"}}></span></div>
-              </div>
-              <div className='s-bar'>
-                <div className='s-name'>
-                  <span>Python</span>
-                  <span>59%</span>
-                </div>
-                <div className='progress'><span style={start? {width: "59%"}: {width: "0%"}}></span></div>
-              </div>
+              ))}
+              
           </div>
           <div className='s-container' id='circle-container'>
             <div className='s-title'>Professional Skills</div>
             <div className='circle-wrap'>
-            <div className='box'>
-              <div className='percent'>
-                <svg>
-                  <circle className='circle'cx='40' cy='40' r='40'></circle>
-                  <circle className='circle'cx='40' cy='40' r='40' style={circlestart?{strokeDashoffset: "78"}:{strokeDashoffset: "255"} }></circle>
-                </svg>
-                <div className='number'>
-                  <h2>70%</h2>
+              {profskills.map((value)=>(
+                <div className="box">
+                  <div className='percent'>
+                    <svg>
+                      <circle className='circle'cx='40' cy='40' r='40'></circle>
+                      <circle className='circle'cx='40' cy='40' r='40' style={circlestart?{strokeDashoffset: `${value.width}`}:{strokeDashoffset: "255"} }></circle>
+                    </svg>
+                    <div className='number'>
+                      <h2>{value.perct}%</h2>
+                    </div>
+                  </div>
+                  <h2 className='s-text'>{value.skill}</h2>
                 </div>
-              </div>
-              <h2 className='s-text'>Creativity</h2>
-            </div>
-            <div className='box'>
-              <div className='percent'>
-                <svg>
-                  <circle className='circle'cx='40' cy='40' r='40'></circle>
-                  <circle className='circle'cx='40' cy='40' r='40' style={circlestart?{strokeDashoffset: "55"}:{strokeDashoffset: "255"} }></circle>
-                </svg>
-                <div className='number'>
-                  <h2>83%</h2>
-                </div>
-              </div>
-              <h2 className='s-text'>Team Work</h2>
-            </div>
-            <div className='box'>
-              <div className='percent'>
-                <svg>
-                  <circle className='circle'cx='40' cy='40' r='40'></circle>
-                  <circle className='circle'cx='40' cy='40' r='40' style={circlestart?{strokeDashoffset: "45"}:{strokeDashoffset: "255"} }></circle>
-                </svg>
-                <div className='number'>
-                  <h2>87%</h2>
-                </div>
-              </div>
-              <h2 className='s-text'>Project Management</h2>
-            </div>
+              ))}
             </div>
           </div>
         </div>
